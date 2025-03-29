@@ -33,11 +33,17 @@ jobs:
           format: 'HTML'
 
       - name: Upload Test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@master
         with:
-          name: sast report
-          path: |
-            ./ODC-report
+          name: Depcheck report
+          path: ${{github.workspace}}/reports
+
+#      - name: Upload Test results
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: sast report
+#          path: |
+#            ./ODC-report
 
 #      - name: Run scan with ODC
 #        run: |
